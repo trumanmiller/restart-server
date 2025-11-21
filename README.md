@@ -1,6 +1,7 @@
 ![Restart Server icon](docs/media/icon_128x128.png)
 
 # Restart Server
+1.21-1.21.5 branch
 
 Adds a restart command to dedicated servers.
 
