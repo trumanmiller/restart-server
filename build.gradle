@@ -10,6 +10,9 @@ base {
     archivesName = project.archives_base_name
 }
 
+compileJava {
+    options.compilerArgs += ['-Xlint:deprecation']
+}
 
 repositories {
     // Add repositories to retrieve artifacts from in here.
@@ -29,7 +32,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // Fabric API
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.83.0+1.20"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Cloth Config
     modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
@@ -45,7 +48,7 @@ processResources {
     filteringCharset = "UTF-8"
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        expand "version": inputs.properties.version
     }
 }
 
@@ -106,7 +109,7 @@ loom {
 
             // Enable the gameTest runner
             vmArg "-Dfabric-api.gametest"
-            vmArg "-Dfabric-api.gametest.report-file=${layout.buildDirectory}/junit.xml"
+            vmArg "-Dfabric-api.gametest.report-file=${project.layout.buildDirectory}/junit.xml"
             runDir "build/gametest"
         }
     }
