@@ -1,7 +1,8 @@
 ![Restart Server icon](docs/media/icon_128x128.png)
 
 # Restart Server
-1.21-1.21.5 branch
+**1.21.6-1.21.10 Branch** 
+
 
 Adds a restart command to dedicated servers.
 
@@ -41,7 +42,7 @@ A: No.
 A: Also no.
 
 - Q: Does only the server need this mod or does the client need it too?  
-A: Only the server needs this mod. Singleplayer/LAN is not supported.
+A: Only the server needs this mod.
 
 ## License
 
