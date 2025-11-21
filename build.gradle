@@ -40,7 +40,7 @@ dependencies {
     }
 
     // Fabric Permissions API
-    include(modImplementation('me.lucko:fabric-permissions-api:0.3.1'))
+    include(modImplementation("me.lucko:fabric-permissions-api:${project.fabric_permissions_api}"))
 }
 
 processResources {
